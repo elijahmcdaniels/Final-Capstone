@@ -1,0 +1,18 @@
+.btn {
+    background-color: #657A42;
+}
+
+/* Match slider thumb color to .btn */
+input[type="range"]::-webkit-slider-thumb {
+    background: #657A42;
+}
+input[type="range"]::-moz-range-thumb {
+    background: #657A42;
+}
+input[type="range"]::-ms-thumb {
+    background: #657A42;
+}
+
+.container {
+    padding-top: 20px;
+}

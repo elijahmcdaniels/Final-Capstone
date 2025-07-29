@@ -85,7 +85,7 @@ function displayActivities(activities) {
     const activityList = document.getElementById("activity-list");
     activityList.innerHTML = "";
 
-    // Limit to first 10 activities and show name + description
+    // Limit to first 10 activities and show name + description only
     activities.slice(0, 10).forEach(activity => {
         const li = document.createElement("li");
         li.textContent = activity.name;

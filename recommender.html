@@ -4,33 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Recommender</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="recommender.css" />
 </head>
 
 <body>
-    <div id="quiz-container">
+    <div id="quiz-container" class="container">
         <form id="preference-quiz">
-            <label for="budget">Budget:</label>
-            <select id="budget" >
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-            </select>
-
-            <label for="weather">Preferred Weather:</label>
-            <select id="weather" >
-                <option value="warm">Warm</option>
-                <option value="mild">Mild</option>
-                <option value="cold">Cold</option>
-            </select>
-
-            <label for="activity">Preferred Activity:</label>
-            <select id="activity" >
-                <option value="culinary">Culinary</option>
-                <option value="museum">Museum</option>
-            </select>
-
-            <button type="submit">Find a Destination</button>
+            <div class="input-field">
+                <select id="budget">
+                    <option value="" disabled selected>Choose your budget</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <label for="budget">Budget</label>
+            </div>
+            <div class="input-field">
+                <select id="weather">
+                    <option value="" disabled selected>Choose preferred weather</option>
+                    <option value="warm">Warm</option>
+                    <option value="mild">Mild</option>
+                    <option value="cold">Cold</option>
+                </select>
+                <label for="weather">Preferred Weather</label>
+            </div>
+            <div class="input-field">
+                <select id="activity">
+                    <option value="" disabled selected>Choose preferred activity</option>
+                    <option value="culinary">Culinary</option>
+                    <option value="museum">Museum</option>
+                </select>
+                <label for="activity">Preferred Activity</label>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit">Find a Destination</button>
         </form>
     </div>
     
@@ -43,11 +50,18 @@
 
     <div id="recommended-city"></div>
 
-    <div id="activity-section">
-        <h4>Top Activities</h4>
+    <div id="activity-section" class="container">
+        <h4 class="center-align">Top Activities</h4>
         <ul id="activity-list"></ul>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('select');
+        M.FormSelect.init(elems);
+      });
+    </script>
     <script src="recommender.js"></script>
 </body>
 </html>
