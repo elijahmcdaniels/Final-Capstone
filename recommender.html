@@ -6,15 +6,48 @@
     <title>Travel Recommender</title>
     <link rel="stylesheet" href="recommender.css" />
 </head>
+
 <body>
     <div id="quiz-container">
-        <form action="">
-            <input type="radio" />
-            <button type="submit">Submit</button>
-            <button type="reset">Clear</button>
+        <form id="preference-quiz">
+            <label for="budget">Budget:</label>
+            <select id="budget" >
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <label for="weather">Preferred Weather:</label>
+            <select id="weather" >
+                <option value="warm">Warm</option>
+                <option value="mild">Mild</option>
+                <option value="cold">Cold</option>
+            </select>
+
+            <label for="activity">Preferred Activity:</label>
+            <select id="activity" >
+                <option value="culinary">Culinary</option>
+                <option value="museum">Museum</option>
+            </select>
+
+            <button type="submit">Find a Destination</button>
         </form>
     </div>
     
+
+    <div id="radius-container">
+        <label for="radius">Radius (km):</label>
+        <input type="range" id="radius" name="radius" min="1" max="20" value="10" />
+        <span id="radius-value">10</span> km
+    </div>
+
+    <div id="recommended-city"></div>
+
+    <div id="activity-section">
+        <h4>Top Activities</h4>
+        <ul id="activity-list"></ul>
+    </div>
+
     <script src="recommender.js"></script>
 </body>
 </html>
