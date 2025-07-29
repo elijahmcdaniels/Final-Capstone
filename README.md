@@ -15,4 +15,8 @@ Page Requirements
   The website’s shop page  should display a minimum of 9 items, each item must include the name of the product,, description,  and cost 
   The contact page should have a contact form and include an email address for potential clients or employers to reach out to.
   The contact form must accept a name, phone number, email, and comment from someone attempting to fill out the form. 
+
+  CAPSTONE PROJECT
+  The Travel Recommender takes three input fields (budget, preferred weather, and preferred activity), and calculates a score for each of six prechosen destinations. The destination with the highest score will be chosen, and ten activities will be displayed. The user can also set a radius from 1-20 kilometers.
+
   

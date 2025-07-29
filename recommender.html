@@ -5,10 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Recommender</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="recommender.css" />
 </head>
 
 <body>
+    <header>
+  <!-- Fixed Navigation Bar -->
+  <div class="top-navbar-fixed">
+    <nav class="top-nav">
+      <div class="nav-wrapper nav-color">
+        <div class="container">
+          <a href="index.html" class="brand-logo left">TravelSpiria</a>
+          <ul class="right hide-on-med-and-down">
+            
+            <li><a href="index.html#Destinations">Destinations</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="index.html">About us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/recommender.html">Recommender</a></li>
+            
+            <li>
+              <a class="search-trigger waves-effect waves-light" href="#!">
+                <i class="material-icons">search</i>
+              </a>
+            </li>
+          </ul>
+
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Right Side Navigation -->
+  <ul class="sidenav right-aligned" id="mobile-demo">
+    <!-- Search Bar -->
+    <li>
+      <div class="search-container">
+        <div class="nav-wrapper">
+          <form>
+            <div class="input-field">
+              <input id="search" type="search" placeholder="Search..." required>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons close">close</i>
+            </div>
+          </form>
+        </div>
+      </div>
+    </li>
+    
+    <li><div class="divider"></div></li>
+    
+    <!-- Navigation Links -->
+    <li><a href="index.html" class="waves-effect"><i class="material-icons">info</i>About us</a></li>
+    <li><a href="shop.html" class="waves-effect"><i class="material-icons">shopping_bag</i>Shop</a></li>
+    <li><a href="destination-1.html" class="waves-effect"><i class="material-icons">collections</i>Destination1</a></li>
+    <li><a href="destination-2.html" class="waves-effect"><i class="material-icons">collections</i>Destination2</a></li>
+
+    <li><a href="contact.html" class="waves-effect"><i class="material-icons">email</i>Contact</a></li>
+    
+    <li><div class="divider"></div></li>
+    
+    <li><a href="#!" class="waves-effect"><i class="material-icons">settings</i>Settings</a></li>
+    <li><a href="#!" class="waves-effect"><i class="material-icons">help</i>Help</a></li>
+  </ul>
+</header>
+
+<!--Travel preferences quiz-->
     <div id="quiz-container" class="container">
         <form id="preference-quiz">
             <div class="input-field">
@@ -18,7 +82,6 @@
                     <option value="medium">Medium</option>
                     <option value="high">High</option>
                 </select>
-                <label for="budget">Budget</label>
             </div>
             <div class="input-field">
                 <select id="weather">
@@ -27,7 +90,6 @@
                     <option value="mild">Mild</option>
                     <option value="cold">Cold</option>
                 </select>
-                <label for="weather">Preferred Weather</label>
             </div>
             <div class="input-field">
                 <select id="activity">
@@ -35,7 +97,6 @@
                     <option value="culinary">Culinary</option>
                     <option value="museum">Museum</option>
                 </select>
-                <label for="activity">Preferred Activity</label>
             </div>
             <button class="btn waves-effect waves-light" type="submit">Find a Destination</button>
         </form>
