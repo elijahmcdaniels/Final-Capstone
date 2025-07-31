@@ -2,7 +2,7 @@
     background-color: #657A42;
 }
 
-/* Match slider thumb color to .btn */
+select /* Match slider thumb color to .btn */
 input[type="range"]::-webkit-slider-thumb {
     background: #657A42;
 }
@@ -15,4 +15,9 @@ input[type="range"]::-ms-thumb {
 
 .container {
     padding-top: 20px;
+}
+
+/* Style only the dropdown options, not the placeholder */
+.dropdown-content li:not(.disabled) > span {
+    color: #657A42 !important;
 }
